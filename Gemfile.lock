@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    fluent-plugin-statsd-output (1.4.0)
+    fluent-plugin-statsd-output (1.4.1)
       fluentd (>= 0.10.8)
       statsd-ruby (~> 1.4)
 
