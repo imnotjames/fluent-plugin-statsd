@@ -1,16 +1,20 @@
 sudo: enable
 dist: trusty
 language: ruby
-
 cache: bundler
-
 rvm:
-  - 2.1
-  - 2.2
-  - 2.3
-  - 2.4
-  - 2.5
-  - 2.6
-
-
+- 2.1
+- 2.2
+- 2.3
+- 2.4
+- 2.5
+- 2.6
 script: bundle exec rspec
+deploy:
+  provider: rubygems
+  api_key:
+    secure: pc4xpT/QXGFbt1Oj53vryjJxf1jizucUPjzbTbu/k1zlS1ZZy1aCywIg6ypV0ew06zxp8QY/iflYGAzvGH2hAEcf0FLHPlyNfdYC7GGLhWu0dCVC3GUXdySmmG6g1qS6ehMjDnVqPdMWIgCRd/xfiA/v4ItCzXvw+p6ZB6hg75LZhiYUAJ7cCfZhfLdEafWtNmMJMJK7oE0djPGNNdkFlqspKINeKRJ6i9ixSvYyAMsSQb8KXpn+FFMjYAM2/xLaMjDGcKFW2sgvSt4JPMY/WlNfWGKGTfu5AwMteWlAU0n5MjJxXfEa4T63iGs+OHodeCIX6n04f5icE7//c1fsa5C0MEFzXJf2Wf6nPLCiKkFBvgZtW3GS/Gox5f1O3ciRdb1chRej3tMRE/AYB/4t2/pLdjEKpkB8xtzXWc7Tk0t/oOnHJAemehB5+wanfY3HFaROFylANag9qUWlk9Ahq/kNxFMU3I9Vqt4zCJf3gn1OqDyiS/hZfRbN/k/Z43UIL2CflAAV3pkiBvLenF0w72qOa2j77ce2JWuDc4USPsVLvlaeC1nulurT6oTMXs06p0kFAoCGrUYDqpjeLPKjik/7PlUQ7dwRUIxeNIa9rU0uFm3FdPPASJRkXtBrdmfsvgYaL1mSNVSgH9E+RdIlFd/IawYuNp5y//9AT98sWOI=
+  gem: fluent-plugin-statsd-output
+  on:
+    tags: true
+    repo: imnotjames/fluent-plugin-statsd
