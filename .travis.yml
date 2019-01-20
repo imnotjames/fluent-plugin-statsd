@@ -24,7 +24,7 @@ jobs:
         script: skip
         provider: rubygems
         api_key:
-          secure: pc4xpT/QXGFbt1Oj53vryjJxf1jizucUPjzbTbu/k1zlS1ZZy1aCywIg6ypV0ew06zxp8QY/iflYGAzvGH2hAEcf0FLHPlyNfdYC7GGLhWu0dCVC3GUXdySmmG6g1qS6ehMjDnVqPdMWIgCRd/xfiA/v4ItCzXvw+p6ZB6hg75LZhiYUAJ7cCfZhfLdEafWtNmMJMJK7oE0djPGNNdkFlqspKINeKRJ6i9ixSvYyAMsSQb8KXpn+FFMjYAM2/xLaMjDGcKFW2sgvSt4JPMY/WlNfWGKGTfu5AwMteWlAU0n5MjJxXfEa4T63iGs+OHodeCIX6n04f5icE7//c1fsa5C0MEFzXJf2Wf6nPLCiKkFBvgZtW3GS/Gox5f1O3ciRdb1chRej3tMRE/AYB/4t2/pLdjEKpkB8xtzXWc7Tk0t/oOnHJAemehB5+wanfY3HFaROFylANag9qUWlk9Ahq/kNxFMU3I9Vqt4zCJf3gn1OqDyiS/hZfRbN/k/Z43UIL2CflAAV3pkiBvLenF0w72qOa2j77ce2JWuDc4USPsVLvlaeC1nulurT6oTMXs06p0kFAoCGrUYDqpjeLPKjik/7PlUQ7dwRUIxeNIa9rU0uFm3FdPPASJRkXtBrdmfsvgYaL1mSNVSgH9E+RdIlFd/IawYuNp5y//9AT98sWOI=
+          secure: sXU46GiEXwTfPx8AwTWuBJg6bUZWvjDgJR/bEUGMXoW4R5Q4XlLAOflwAtGpXY6YXI/RNBYD1GM2AyVdTDa/fnO1sViF1pJSXsD+XvnxB0LNbTuLPRfzJ2M15vYcqEyG2AhRPb+epe+IMQ60wXcOrwZjHzHoH5tutBo8dY+dqxkpCQiZke1MoH+ocfL9f9gtdGvaexMvDNRgwaYw5pjaWr0RKez+bHvEhVPdugyHcvHjjXJGTmYKyVap0yewojxDWpD2Rp/2HDg+Xsi3KqJ9gWrpQtVx4mSlSx80eI9N5jgiyxkRvZOVmJ1B532QFLCo0BLtrMfFD/zErUQ+MsRmtgNR66HnRNtBoGDRhn82bvdsr4bx0f+poUwZxDlv/oqqqRvPGNfDzsy3Qt8G3bAyZO+cKsGxFclnGCE94JdGtopnXEJ+YU2gfnUBUk8LFHj6YNwfVCrXU6dLDx0J8mWIkdFkTqOiLZMRKS0LYRrcCmOed0Jlkt1JprMUUDesR+79dxC2ESbbtd4Dyur2PIT6cTm959lxS5HBaIumF/W4qxzWU0DvXvOqDjiujlwMqHJq7FPPG96tZnmwrFXkGSOhv6ebsAYIp4t6CU28zOFHKzqy5xHsApEX7GHV2ZOOgHExWngKX03aPcsMv99ncn6kXGQHevYnofZAguoLXAddoIk=
         gem: fluent-plugin-statsd-output
         on:
           tags: true
