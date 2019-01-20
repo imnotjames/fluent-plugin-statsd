@@ -2,3 +2,7 @@
 *.gem
 
 spec/examples.txt
+
+# Ignore bundler things
+.bundle
+vendor/
