@@ -52,13 +52,13 @@ RSpec.describe Fluent::StatsdOutput do
     expect(statsd).to receive(:batch_size=).with(nil)
     expect(statsd).to receive(:batch_byte_size=).with(512)
 
-    expect(statsd).to receive(:increment).with('res_code_2xx', sample_rate: 1.0).twice.times
-    expect(statsd).to receive(:increment).with('res_code_4xx', sample_rate: 1.0).once.times
-    expect(statsd).to receive(:increment).with('res_code_5xx', sample_rate: 1.0).once.times
-    expect(statsd).to receive(:timing).with('res_time', 102, sample_rate: 1.0).ordered
-    expect(statsd).to receive(:timing).with('res_time', 105, sample_rate: 1.0).ordered
-    expect(statsd).to receive(:timing).with('res_time', 112, sample_rate: 1.0).ordered
-    expect(statsd).to receive(:timing).with('res_time', 125, sample_rate: 1.0).ordered
+    expect(statsd).to receive(:increment).with('res_code_2xx', 1.0).twice.times
+    expect(statsd).to receive(:increment).with('res_code_4xx', 1.0).once.times
+    expect(statsd).to receive(:increment).with('res_code_5xx', 1.0).once.times
+    expect(statsd).to receive(:timing).with('res_time', 102, 1.0).ordered
+    expect(statsd).to receive(:timing).with('res_time', 105, 1.0).ordered
+    expect(statsd).to receive(:timing).with('res_time', 112, 1.0).ordered
+    expect(statsd).to receive(:timing).with('res_time', 125, 1.0).ordered
 
     emit_events([
       {'response_time' => 102, 'status' => '200'},

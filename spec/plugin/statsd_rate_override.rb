@@ -48,10 +48,10 @@ RSpec.describe Fluent::StatsdOutput do
     expect(statsd).to receive(:batch_size=).with(nil)
     expect(statsd).to receive(:batch_byte_size=).with(512)
 
-    expect(statsd).to receive(:timing).with('res_time', 102, sample_rate: 0.4).ordered
-    expect(statsd).to receive(:timing).with('res_time', 105, sample_rate: 0.4).ordered
-    expect(statsd).to receive(:timing).with('res_time', 112, sample_rate: 0.4).ordered
-    expect(statsd).to receive(:timing).with('res_time', 125, sample_rate: 0.4).ordered
+    expect(statsd).to receive(:timing).with('res_time', 102, 0.4).ordered
+    expect(statsd).to receive(:timing).with('res_time', 105, 0.4).ordered
+    expect(statsd).to receive(:timing).with('res_time', 112, 0.4).ordered
+    expect(statsd).to receive(:timing).with('res_time', 125, 0.4).ordered
 
     emit_events([
       {'response_time' => 102, 'status' => '200'},
