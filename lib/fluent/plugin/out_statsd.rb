@@ -76,17 +76,17 @@ module Fluent
 
       case type
       when 'timing'
-        @statsd.timing key, val.to_f, sample_rate: rate.to_f
+        @statsd.timing key, val.to_f, rate.to_f
       when 'gauge'
-        @statsd.gauge key, val.to_f, sample_rate: rate.to_f
+        @statsd.gauge key, val.to_f, rate.to_f
       when 'count'
-        @statsd.count key, val.to_f, sample_rate: rate.to_f
+        @statsd.count key, val.to_f, rate.to_f
       when 'set'
-        @statsd.set key, val, sample_rate: rate.to_f
+        @statsd.set key, val, rate.to_f
       when 'increment'
-        @statsd.increment key, sample_rate: rate.to_f
+        @statsd.increment key, rate.to_f
       when 'decrement'
-        @statsd.decrement key, sample_rate: rate.to_f
+        @statsd.decrement key, rate.to_f
       else
         raise "Invalid statsd type '#{type}'"
       end
