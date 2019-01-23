@@ -10,11 +10,9 @@ rvm:
   - 2.5
   - 2.6
 script: bundle exec rspec
-
 stages:
   - test
   - deploy
-
 jobs:
   include:
     - stage: deploy
@@ -24,7 +22,7 @@ jobs:
         script: skip
         provider: rubygems
         api_key:
-          secure: sXU46GiEXwTfPx8AwTWuBJg6bUZWvjDgJR/bEUGMXoW4R5Q4XlLAOflwAtGpXY6YXI/RNBYD1GM2AyVdTDa/fnO1sViF1pJSXsD+XvnxB0LNbTuLPRfzJ2M15vYcqEyG2AhRPb+epe+IMQ60wXcOrwZjHzHoH5tutBo8dY+dqxkpCQiZke1MoH+ocfL9f9gtdGvaexMvDNRgwaYw5pjaWr0RKez+bHvEhVPdugyHcvHjjXJGTmYKyVap0yewojxDWpD2Rp/2HDg+Xsi3KqJ9gWrpQtVx4mSlSx80eI9N5jgiyxkRvZOVmJ1B532QFLCo0BLtrMfFD/zErUQ+MsRmtgNR66HnRNtBoGDRhn82bvdsr4bx0f+poUwZxDlv/oqqqRvPGNfDzsy3Qt8G3bAyZO+cKsGxFclnGCE94JdGtopnXEJ+YU2gfnUBUk8LFHj6YNwfVCrXU6dLDx0J8mWIkdFkTqOiLZMRKS0LYRrcCmOed0Jlkt1JprMUUDesR+79dxC2ESbbtd4Dyur2PIT6cTm959lxS5HBaIumF/W4qxzWU0DvXvOqDjiujlwMqHJq7FPPG96tZnmwrFXkGSOhv6ebsAYIp4t6CU28zOFHKzqy5xHsApEX7GHV2ZOOgHExWngKX03aPcsMv99ncn6kXGQHevYnofZAguoLXAddoIk=
+          secure: hIk7N6BjLuQDNJWXEc4fZPPqcygxmvQ8IDMitY3rVaXK8+1OJEutHT/ehOhBWMjEvS70OTnCYwo6cpoQkvCmW/V6cchnt5PIBdEQ4vILEh8OP2nB72AhwxnbUOgJ2Uk+EPt1XGJPqUQ0/ZqaP6uIIYClh9s9yAxQWrkJfQrecRJF2WzwWoNVXXCl0+UuH/pcKVo5jaL56zxQTOePdEcBrm/EB3YqAmdW7wHsXnm0CaWWO5VJ/6PJHlyUW4jd5EJBYesPoAEzZwjPhUqNCcg9KqHJSce41WD6eaVHdnqyUwdZCO6OOpXTSArw1XykXX/Z4EXd2QOP/g84XG6vk10hoy9+UomHxFMtGk1AP6vMOLxn9q7zF43S/as6AQdHAnegnWYZxQpW41DSXrqgOWxIFYznR/ZmD8zJR20hgXdMgYjGZq10Wy/i8Y2SUDfojuw5OGej9OehXYQ8ZBNkdSN4U5AiGYrCBOy2WGbiDehIR/EVN5yiUS6WapcRWZ2Ia9vUDgUXHOW2OdUw5N1FR1uJ+dLr5oihD6g7nweFa6qsJb+88ecz+nby9dgL+WTVlzOzBshE8q5UcdS5959wnShHUtEZP5yQDmWn4u/haL+osEO0PRu8KLick6lYzSNO0HEEELEV76mSHI+UKVZxG8T7E+WUEoskxtRn3aomQOKvQkA=
         gem: fluent-plugin-statsd-output
         on:
           tags: true
